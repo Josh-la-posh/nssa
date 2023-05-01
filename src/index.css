@@ -1,0 +1,35 @@
+@import url(./assets/fonts/stylesheet.css);
+
+@tailwind base;
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c5d8fc;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 14px;
+  border: 3px solid #c5d8fc;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+html body {
+  font-family: 'Gilroy', Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
