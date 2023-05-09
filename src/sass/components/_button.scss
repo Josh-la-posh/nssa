@@ -1,0 +1,16 @@
+.pri-btn {
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  background: $color-primary;
+  font-size: $font-15;
+  font-weight: $small-weight;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btns {
+  margin-top: 19px;
+  gap: 32px;
+}

@@ -1,0 +1,29 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.49);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    max-width: 610px;
+    min-width: 20.125rem;
+    max-height: 546px;
+    min-height: 34.125rem;
+    background: #fff;
+    padding: 6rem;
+    display: flex;
+    justify-content: center;
+  }
+  &__body {
+    width: 452px;
+    min-width: 28.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
