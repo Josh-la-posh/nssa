@@ -4,13 +4,13 @@ import { BaseApp } from './BaseApp';
 
 import { RouteError } from '@/components/Error';
 import { AuthRoutes } from '@/features/auth';
-import { DashboardRoutes } from '@/features/dashboard/routes';
+import { AppRoutes } from '@/features/app';
 
 export const routesList: RouteObject[] = [
   {
     path: '',
     element: <BaseApp />,
     errorElement: <RouteError />,
-    children: [AuthRoutes, DashboardRoutes],
+    children: [AuthRoutes, AppRoutes],
   },
 ];

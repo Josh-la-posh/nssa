@@ -1,4 +1,4 @@
-.appLayout {
+.mainLayout {
   max-width: 1440px;
   height: 100vh;
   margin: 0 auto;
@@ -13,6 +13,8 @@
     }
     .mainContent {
       flex: 1;
+      overflow-y: scroll;
+      padding-bottom: 3rem;
     }
   }
 }

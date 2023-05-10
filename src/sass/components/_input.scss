@@ -1,5 +1,6 @@
 .input {
   gap: 7px;
+  position: relative;
 
   &__label {
     color: $input-text;
@@ -22,7 +23,7 @@ input[type]:focus {
   outline: 1px solid #4792ff;
 }
 
-input[type=checkbox] {
+input[type='checkbox'] {
   width: 18px;
   height: 18px;
 }

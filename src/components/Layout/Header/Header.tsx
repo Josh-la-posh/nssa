@@ -10,13 +10,13 @@ export const Header = () => {
       <h2 className="mr-auto">Admin</h2>
       <div className="search-bar mr-11 h-9 w-80 rounded flex justify-between items-center pr-4">
         <input type="text" placeholder="Search for ..." />
-        <FontAwesomeIcon className='search-icon' icon="magnifying-glass" />
+        <FontAwesomeIcon className="search-icon" icon="magnifying-glass" />
       </div>
-      <div className="icon mr-6 h-5">
-        <FontAwesomeIcon icon="users" className='h-5'/>
+      <div className="icon mr-6 flex">
+        <FontAwesomeIcon icon="users" className="h-5" color="#323232" />
       </div>
-      <div className="icon h-6">
-        <FontAwesomeIcon className="h-6" icon="bell" />
+      <div className="icon flex ">
+        <FontAwesomeIcon className="h-6" icon="bell" color="#4F4F4F" />
       </div>
       <div className="img w-10 h-10 bg-black ml-10 rounded-full">
         <img src="" alt="" />

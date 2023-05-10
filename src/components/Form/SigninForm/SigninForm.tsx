@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { InputLayout } from '../../UI/Input';
 import { ButtonLayout } from '../../UI/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type FormProps = {
   // children: React.ReactNode;
@@ -14,6 +15,7 @@ type FormProps = {
 export const SignInFormLayout = ({ style, to }: FormProps) => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
+  const [showPass, setShowPass] = useState(true);
   return (
     <div style={style}>
       <form action="" className="signin">
@@ -30,12 +32,19 @@ export const SignInFormLayout = ({ style, to }: FormProps) => {
         </div>
         <InputLayout
           name="pass"
-          type="password"
+          type={showPass ? 'password' : 'text'}
           value={pass}
           onChange={(e) => setPass(e.target.value)}
           placeholder="****************"
         >
           Password
+          {pass.length && <FontAwesomeIcon
+            onClick={() => {
+              setShowPass(!showPass);
+            }}
+            className="search-icon absolute right-4 bottom-5"
+            icon={showPass ? 'eye' : 'eye-slash'}
+          />}
         </InputLayout>
 
         <Link to="/forgotpassword">
@@ -43,7 +52,7 @@ export const SignInFormLayout = ({ style, to }: FormProps) => {
             Forgot Password?
           </span>
         </Link>
-        <ButtonLayout to={to} style={{}}>
+        <ButtonLayout to="/dashboard" style={{}}>
           Sign In
         </ButtonLayout>
       </form>

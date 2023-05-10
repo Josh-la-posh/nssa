@@ -1,6 +1,7 @@
 import * as React from 'react';
-import Logo from '../../../assets/images/onboarding/logo-white.svg';
+import { MainLayout } from '..';
 import { Header } from '../Header/Header';
+import { Sidebar } from '../Sidebar';
 
 type AppLayoutProps = {
   children: React.ReactNode;
@@ -8,20 +9,16 @@ type AppLayoutProps = {
 
 export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
-    <div className="appLayout">
-      <div className="appLayout__container flex">
+    <MainLayout>
+      <div className="mainLayout__container flex">
         {/* SIDEBAR */}
-        <div className="sidebar flex-column a-center pt-5">
-          <div className="logo">
-            <img src={Logo} alt="" />
-          </div>
-        </div>
+        <Sidebar />
         {/* MAINCONTENT */}
         <div className="mainContent relative">
-          <Header />
-          {children}
+          <div className='sticky top-0 bg-white'><Header /></div>
+          <div className="pt-7 px-10">{children}</div>
         </div>
       </div>
-    </div>
+    </MainLayout>
   );
 };

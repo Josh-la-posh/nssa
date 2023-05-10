@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { InputLayout, SelectInputLayout } from '../../UI/Input';
 import { ButtonLayout } from '../../UI/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type FormProps = {
   // children: React.ReactNode;
@@ -17,6 +18,7 @@ export const SignUpFormLayout = ({ style, to }: FormProps) => {
   const [email, setEmail] = useState('');
   const [gender, setGender] = useState('');
   const [pass, setPass] = useState('');
+  const [showPass, setShowPass] = useState(true);
   return (
     <div style={style}>
       <form action="" className="signin">
@@ -61,12 +63,21 @@ export const SignUpFormLayout = ({ style, to }: FormProps) => {
         <div style={{ marginBottom: '1rem' }}>
           <InputLayout
             name="pass"
-            type="password"
+            type={showPass ? 'password' : 'text'}
             value={pass}
             onChange={(e) => setPass(e.target.value)}
             placeholder="****************"
           >
             Password
+            {pass.length && (
+              <FontAwesomeIcon
+                onClick={() => {
+                  setShowPass(!showPass);
+                }}
+                className="search-icon absolute right-4 bottom-5"
+                icon={showPass ? 'eye' : 'eye-slash'}
+              />
+            )}
           </InputLayout>
         </div>
 

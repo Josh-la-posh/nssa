@@ -4,7 +4,6 @@ import Logo2 from '../../../../assets/images/onboarding/img-3.png';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Modal } from '@/components/Layout/Modal';
-import Checked from '../../../../assets/images/onboarding/checked.svg';
 
 export const VerificationPage = () => {
   const [manual, setManual] = useState(0);
@@ -59,7 +58,7 @@ export const VerificationPage = () => {
             Confirm
           </ButtonLayout>
           {show && (
-            <Modal image={Checked} to="/dashboard">
+            <Modal note="Go to Login" to="/login">
               Your email has been verified successfully
             </Modal>
           )}
