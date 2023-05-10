@@ -1,0 +1,36 @@
+header {
+    height: 60px;
+
+    h2 {
+        font-size: $font-23;
+        font-weight: $weight-600;
+        line-height: 27.6px;
+        color: $dark-heading-text;
+    }
+
+    .search-bar {
+        border: 1px solid $input-bg;
+
+        input {
+            width: 100%;
+            margin-right: 6px;
+            padding-left: 16px;
+
+            &[type]:focus {
+                outline: none;
+            }
+        }
+
+        ::placeholder {
+            color: $dark-heading-text;
+            font-size: $font-12;
+            font-weight: $weight-500;
+            line-height: 14.4px;
+        }
+
+        .search-icon {
+            color: #E0E0E0;
+            height: 20px;
+        }
+    }
+}

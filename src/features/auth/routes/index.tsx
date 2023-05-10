@@ -17,7 +17,7 @@ const AuthRouteList: RouteObject[] = [
     element: <SignUp />,
   },
   {
-    path: 'login',
+    path: '/login',
     element: <Login />,
   },
   {

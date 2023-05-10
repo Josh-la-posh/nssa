@@ -20,7 +20,12 @@ export const Modal = ({ children, image, to }: ModalProps) => {
           </div>
           <p className="text-400-16">Go to login</p>
           <ButtonLayout to={to} style={{ width: '100%', marginTop: '24px' }}>
-            Continue
+            <div
+              className="flex a-center j-center"
+              style={{ height: '100%', backgroundColor: '#3065BB', borderRadius: '4px' }}
+            >
+              Continue
+            </div>
           </ButtonLayout>
         </div>
       </div>

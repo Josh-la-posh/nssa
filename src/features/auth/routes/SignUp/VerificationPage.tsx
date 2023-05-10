@@ -34,7 +34,7 @@ export const VerificationPage = () => {
             Enter Code Manually
           </button>
           <div className="btns flex j-center">
-            <Link to="/login">
+            <Link to="/">
               <span className="form-link flex">
                 <span>icon</span>
                 Back to Login
@@ -59,7 +59,7 @@ export const VerificationPage = () => {
             Confirm
           </ButtonLayout>
           {show && (
-            <Modal image={Checked} to="/login">
+            <Modal image={Checked} to="/dashboard">
               Your email has been verified successfully
             </Modal>
           )}
