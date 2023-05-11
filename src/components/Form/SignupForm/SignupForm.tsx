@@ -18,7 +18,7 @@ export const SignUpFormLayout = ({ style, to }: FormProps) => {
   const [email, setEmail] = useState('');
   const [gender, setGender] = useState('');
   const [pass, setPass] = useState('');
-  const [showPass, setShowPass] = useState(true);
+  const [showPass, setShowPass] = useState(false);
   return (
     <div style={style}>
       <form action="" className="signin">
@@ -63,7 +63,7 @@ export const SignUpFormLayout = ({ style, to }: FormProps) => {
         <div style={{ marginBottom: '1rem' }}>
           <InputLayout
             name="pass"
-            type={showPass ? 'password' : 'text'}
+            type={showPass ? 'text' : 'password'}
             value={pass}
             onChange={(e) => setPass(e.target.value)}
             placeholder="****************"

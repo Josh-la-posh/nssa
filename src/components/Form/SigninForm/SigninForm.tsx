@@ -15,7 +15,7 @@ type FormProps = {
 export const SignInFormLayout = ({ style, to }: FormProps) => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
-  const [showPass, setShowPass] = useState(true);
+  const [showPass, setShowPass] = useState(false);
   return (
     <div style={style}>
       <form action="" className="signin">
@@ -32,7 +32,7 @@ export const SignInFormLayout = ({ style, to }: FormProps) => {
         </div>
         <InputLayout
           name="pass"
-          type={showPass ? 'password' : 'text'}
+          type={showPass ? 'text' : 'password'}
           value={pass}
           onChange={(e) => setPass(e.target.value)}
           placeholder="****************"
