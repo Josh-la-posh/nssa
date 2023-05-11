@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Logo from '../../../assets/images/onboarding/logo-white.svg';
-import { data } from '@/Data';
+import { sidebars } from '@/Data';
 import { Link } from 'react-router-dom';
 
 export const Sidebar = () => {
@@ -14,7 +14,7 @@ export const Sidebar = () => {
       </div>
 
       <div className="w-full">
-        {data.map(({ icon, url, title, id }, index) => {
+        {sidebars.map(({ icon, url, title, id }, index) => {
           return (
             <div
               className=""
