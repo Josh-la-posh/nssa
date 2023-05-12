@@ -1,0 +1,91 @@
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-around {
+  justify-content: space-around;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+}
+.a-start {
+  align-items: start;
+}
+
+.u-center {
+  text-align: center;
+}
+
+.text-400-12 {
+  font-size: $font-12;
+  font-weight: $small-weight;
+  line-height: 15.06px;
+}
+
+.text-400-16 {
+  font-size: $font-16;
+  font-weight: $small-weight;
+  line-height: 19.36px;
+}
+
+.text-400-19 {
+  font-size: $font-19;
+  font-weight: $small-weight;
+  line-height: 22.8px;
+}
+
+.text-500-12 {
+  font-size: $font-12;
+  font-weight: $weight-500;
+  line-height: 14.4px;
+  color: #b3b3b4;
+}
+
+.text-600-12 {
+  font-size: $font-12;
+  font-weight: $weight-600;
+  line-height: 14.52px;
+  // color: #333333;
+}
+
+.pri-heading {
+  font-size: $font-29;
+  font-weight: $weight-600;
+  text-transform: capitalize;
+  line-height: 34.8px;
+  color: $dark-heading-text;
+  margin-bottom: 1rem;
+}
+
+.sec-heading {
+  font-size: $font-24;
+  font-weight: $weight-700;
+  line-height: 24px;
+  margin-bottom: 1rem;
+}
+
+.form-link {
+  color: $color-primary;
+  font-weight: $small-weight;
+  font-size: $font-12;
+  line-height: 14.4px;
+  gap: 14px;
+}

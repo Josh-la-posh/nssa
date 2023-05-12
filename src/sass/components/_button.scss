@@ -1,0 +1,35 @@
+.pri-btn {
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  background: $color-primary;
+  font-size: $font-15;
+  font-weight: $small-weight;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btns {
+  margin-top: 19px;
+  gap: 32px;
+}
+
+// <Link to="/appform">
+// <button className="border rounded py-1.5 w-40 text-center text-white bg-priBtnColor">
+//   Fill School Application
+// </button>
+// </Link>
+
+.sec-btn {
+  // max-width: 159px;
+  width: 10rem;
+  padding: 6px;
+  text-align: center;
+  border: 1px solid #3062b4;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500px;
+  color: $color-white;
+  background: #3062b4;
+}

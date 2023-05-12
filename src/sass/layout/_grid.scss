@@ -1,0 +1,20 @@
+.mainLayout {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+
+    .sidebar {
+      width: 18%;
+      background: $color-primary-dark;
+    }
+    .mainContent {
+      flex: 1;
+      overflow-y: scroll;
+      padding-bottom: 3rem;
+    }
+  }
+}

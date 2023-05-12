@@ -1,0 +1,105 @@
+.onboarding {
+  height: 100vh;
+  position: relative;
+
+  // FORM SECTION
+  &__form {
+    // padding-top: 7.5rem;
+    padding-top: 120px;
+    .logo {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+
+  // RIGHT SECTION
+
+  &__img {
+    background: $color-primary;
+  }
+  &__img2 {
+    background: #ebf1fc;
+  }
+  &__img,
+  &__img2 {
+    &__container {
+      align-items: center;
+      // padding-top: 7.5rem;
+      padding-top: 120px;
+      position: relative;
+      height: 100vh;
+
+      .logo {
+        position: absolute;
+        right: 0;
+        z-index: 100;
+        top: 80px;
+      }
+
+      p {
+        color: #fff;
+        margin-left: -27%;
+        // margin-top: 3rem;
+        margin-top: 47.2px;
+        text-transform: capitalize;
+      }
+
+      .image {
+        width: 70%;
+        // margin-top: 4.75rem;
+        margin-top: 76px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// SIGNIN FORM
+
+.signing__page {
+  padding-left: 21%;
+}
+
+// CONFIRIMATION PAGE
+
+.confrmationPage {
+  padding-top: 94px;
+
+  .logo {
+    margin-bottom: 62px;
+    width: 129px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(209, 219, 255, 0.21);
+    margin-bottom: 41px;
+  }
+
+  .manual-input {
+    margin-top: 38px;
+
+    .input {
+      input {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        font-weight: $weight-500;
+        font-size: $font-29;
+        text-align: center;
+        border: 1px solid #e0e0e0;
+        color: $dark-heading-text;
+      }
+    }
+  }
+}
