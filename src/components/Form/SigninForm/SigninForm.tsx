@@ -21,30 +21,30 @@ export const SignInFormLayout = ({ style, to }: FormProps) => {
       <form action="" className="signin">
         <div className="signin__input" style={{ marginBottom: '1.56rem' }}>
           <InputLayout
-            name="email"
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e: any) => setEmail(e.target.value)}
             placeholder="enter email address"
           >
             Email Address
           </InputLayout>
         </div>
         <InputLayout
-          name="pass"
           type={showPass ? 'text' : 'password'}
           value={pass}
-          onChange={(e) => setPass(e.target.value)}
+          onChange={(e: any) => setPass(e.target.value)}
           placeholder="****************"
         >
           Password
-          {pass.length && <FontAwesomeIcon
-            onClick={() => {
-              setShowPass(!showPass);
-            }}
-            className="search-icon absolute right-4 bottom-5"
-            icon={showPass ? 'eye' : 'eye-slash'}
-          />}
+          {pass.length && (
+            <FontAwesomeIcon
+              onClick={() => {
+                setShowPass(!showPass);
+              }}
+              className="search-icon absolute right-4 bottom-5"
+              icon={showPass ? 'eye' : 'eye-slash'}
+            />
+          )}
         </InputLayout>
 
         <Link to="/forgotpassword">
@@ -52,7 +52,7 @@ export const SignInFormLayout = ({ style, to }: FormProps) => {
             Forgot Password?
           </span>
         </Link>
-        <ButtonLayout to="/dashboard" style={{}}>
+        <ButtonLayout onClick={() => {}} to="/dashboard" style={{}}>
           Sign In
         </ButtonLayout>
       </form>
@@ -68,15 +68,14 @@ export const ForgotPasswordFormLayout = ({ style, to }: FormProps) => {
     <div style={style}>
       <form action="" className="signin">
         <InputLayout
-          name="email"
           type="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e: any) => setEmail(e.target.value)}
           placeholder="enter email address"
         >
           Email Address
         </InputLayout>
-        <ButtonLayout to={to} style={{ marginTop: '25px' }}>
+        <ButtonLayout onClick={() => {}} to={to} style={{ marginTop: '25px' }}>
           Send Code
         </ButtonLayout>
 
@@ -102,25 +101,27 @@ export const ResetPasswordFormLayout = ({ style, to }: FormProps) => {
       <form action="" className="signin">
         <div className="signin__input" style={{ marginBottom: '1.56rem' }}>
           <InputLayout
-            name="email"
             type="email"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e: any) => setPassword(e.target.value)}
             placeholder="Create a new password"
           >
             Email Password
           </InputLayout>
         </div>
         <InputLayout
-          name="email"
           type="email"
           value={confirmPass}
-          onChange={(e) => setConfirmPass(e.target.value)}
+          onChange={(e: any) => setConfirmPass(e.target.value)}
           placeholder="Re-enter password"
         >
           Confirm Password
         </InputLayout>
-        <ButtonLayout to={password === confirmPass ? '/' : ''} style={{ marginTop: '25px' }}>
+        <ButtonLayout
+          onClick={() => {}}
+          to={password === confirmPass ? '/' : ''}
+          style={{ marginTop: '25px' }}
+        >
           Reset Password
         </ButtonLayout>
 

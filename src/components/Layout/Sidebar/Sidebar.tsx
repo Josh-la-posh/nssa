@@ -4,7 +4,7 @@ import { sidebars } from '@/Data';
 import { Link } from 'react-router-dom';
 
 export const Sidebar = () => {
-  var page = localStorage.getItem('page') ? JSON.parse(localStorage.getItem('page')) : parseInt(0);
+  var page = localStorage.getItem('page') ? JSON.parse(localStorage.getItem('page')) : (0);
   const [curr, setCurr] = useState(page);
 
   return (
@@ -14,7 +14,7 @@ export const Sidebar = () => {
       </div>
 
       <div className="w-full">
-        {sidebars.map(({ icon, url, title, id }, index) => {
+        {sidebars.map(({ icon, url, title, id }, index: any) => {
           return (
             <div
               className=""

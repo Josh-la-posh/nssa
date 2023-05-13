@@ -16,9 +16,11 @@ module.exports = {
       blueWhiteColor: '#F7FCFF',
       darkText: '#212529',
       priGreyColor: '#828282',
+      greyLight: '#F2F2F2',
     },
 
     fontSize: {
+      8: '8px',
       10: '10px',
       12: '12px',
       15: '15px',

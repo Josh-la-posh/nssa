@@ -19,7 +19,7 @@
     background-color: $input-bg;
   }
 }
-input[type]:focus {
+input[type]:focus, select:focus {
   outline: 1px solid #4792ff;
 }
 

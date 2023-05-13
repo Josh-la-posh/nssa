@@ -1,4 +1,5 @@
 import { AppLayout } from '@/components/Layout/AppLayout/AppLayout';
+import { AllApplication } from '@/components/Layout/AllApplication/AllApplication';
 import { Card } from '@/components/UI/Card';
 import { cards } from '@/Data';
 
@@ -27,6 +28,7 @@ export function Onboarding() {
         {/* ALL APPLICATION */}
 
         <div className="mt-8">
+          <AllApplication />
         </div>
       </AppLayout>
     </>

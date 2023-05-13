@@ -10,6 +10,7 @@ export const ResetPassword = () => {
     <div>
       <OnboardingLayout
         imgBg="onboarding__img2"
+        text=''
         image={Design}
         logo={Logo}
         topLogo={TopLogo}
@@ -23,7 +24,7 @@ export const ResetPassword = () => {
               resetting your password.
             </p>
 
-            <ResetPasswordFormLayout style={{ marginTop: '59px' }} />
+            <ResetPasswordFormLayout to='' style={{ marginTop: '59px' }} />
           </div>
         </div>
       </OnboardingLayout>

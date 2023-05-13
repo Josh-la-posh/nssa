@@ -3,22 +3,18 @@ import * as React from 'react';
 type InputProps = {
   children: React.ReactNode;
   type: string;
-  name: string;
   value: string;
   onChange: any;
   placeholder: string;
-  label: string;
-  id: string;
 };
 
-export const InputLayout = ({ children, type, name, value, placeholder, onChange }: InputProps) => {
+export const InputLayout = ({ children, type, value, placeholder, onChange }: InputProps) => {
   return (
     <div className="input flex-column">
       <label className="input__label">{children}</label>
       <input
         className="input__field"
         type={type}
-        name={name}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
@@ -28,15 +24,19 @@ export const InputLayout = ({ children, type, name, value, placeholder, onChange
   );
 };
 
-export const SelectInputLayout = ({ children, name, label, id }: InputProps) => {
+
+type SelectProps = {
+  children: React.ReactNode;
+  label: string;
+  id: string;
+};
+export const SelectInputLayout = ({ children, label, id }: SelectProps) => {
   return (
     <div className="input flex-column">
-      <label name={name} id={id} className="input__label">
+      <label id={id} className="input__label">
         {label}
       </label>
-      <select className="input__field" type="select">
-        {children}
-      </select>
+      <select className="input__field">{children}</select>
     </div>
   );
 };

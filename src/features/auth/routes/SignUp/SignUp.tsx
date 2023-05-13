@@ -6,7 +6,14 @@ import { SignUpFormLayout } from '@/components/Form/SignupForm';
 export const SignUp = () => {
   return (
     <div>
-      <OnboardingLayout text="Welcome back!" imgBg="onboarding__img" image={Design} logo={Logo}>
+      <OnboardingLayout
+        text="Welcome back!"
+        imgBg="onboarding__img"
+        image={Design}
+        logo={Logo}
+        style={{}}
+        topLogo=""
+      >
         <div className="signing__page">
           <div className="signing__page__content">
             <h2 className="sec-heading text-black">Welcome to</h2>
@@ -14,7 +21,7 @@ export const SignUp = () => {
               Let’s get you started. Create an account to begin
             </p>
 
-            <SignUpFormLayout style={{ marginTop: '40px' }} />
+            <SignUpFormLayout to='' style={{ marginTop: '40px' }} />
           </div>
         </div>
       </OnboardingLayout>

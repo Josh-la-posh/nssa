@@ -51,3 +51,41 @@ export const cards = [
 ];
 
 
+export const data = [
+  {
+    id: 1,
+    sn: 1,
+    school: "Divine Heritage Int'l",
+    admin: 'Adeseun Oke',
+    phone: '08012345678',
+    address: '14, Fajuyi Street, Alausa Ikeja',
+    city: 'Lagos',
+    state: 'Lagos',
+    status: 'In-Review',
+    action: 'View',
+  },
+  {
+    id: 2,
+    sn: 2,
+    school: "Divine Heritage Int'l",
+    admin: 'Adeseun Oke',
+    phone: '08012345678',
+    address: '14, Fajuyi Street, Alausa Ikeja',
+    city: 'Lagos',
+    state: 'Lagos',
+    status: 'In-Review',
+    action: 'View',
+  },
+  {
+    id: 3,
+    sn: 3,
+    school: "Divine Heritage Int'l",
+    admin: 'Adeseun Oke',
+    phone: '08012345678',
+    address: '14, Fajuyi Street, Alausa Ikeja',
+    city: 'Lagos',
+    state: 'Lagos',
+    status: 'In-Review',
+    action: 'View',
+  },
+];

@@ -16,7 +16,7 @@ export function SchoolAppForm() {
               Fill in School Application Details
             </span>
           </div>
-          <ApplicationForm></ApplicationForm>
+          <ApplicationForm to="" style={{}} children={undefined} />
         </div>
       </AppLayout>
     </>

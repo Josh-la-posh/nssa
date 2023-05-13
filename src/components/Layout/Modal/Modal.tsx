@@ -21,7 +21,7 @@ export const Modal = ({ children, to, note }: ModalProps) => {
             {children}
           </div>
           <p className="text-400-16">{note}</p>
-          <ButtonLayout to={to} style={{ width: '100%', marginTop: '24px' }}>
+          <ButtonLayout onClick={() => {}} to={to} style={{ width: '100%', marginTop: '24px' }}>
             <div
               className="flex a-center j-center"
               style={{ height: '100%', backgroundColor: '#3065BB', borderRadius: '4px' }}

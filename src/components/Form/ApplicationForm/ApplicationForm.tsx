@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { InputLayout, SelectInputLayout } from '../../UI/Input';
 import { Modal } from '@/components/Layout';
@@ -32,7 +31,8 @@ export const ApplicationForm = ({ style, to }: FormProps) => {
             type="text"
             placeholder="School Name"
             value={school}
-            onChange={(e) => setSchool(e.target.value)}
+            onChange={(e: any) => setSchool(e.target.value)}
+            children={undefined}
           />
         </div>
         <div className="mb-8 flex gap-11 w-full">
@@ -44,7 +44,8 @@ export const ApplicationForm = ({ style, to }: FormProps) => {
               type="text"
               placeholder="Enter Address"
               value={address}
-              onChange={(e) => setAddress(e.target.value)}
+              onChange={(e: any) => setAddress(e.target.value)}
+              children={undefined}
             />
           </div>
           <div className="flex-1">
@@ -55,7 +56,8 @@ export const ApplicationForm = ({ style, to }: FormProps) => {
               type="number"
               placeholder="Enter your phone number"
               value={phoneNo}
-              onChange={(e) => setPhoneNo(e.target.value)}
+              onChange={(e: any) => setPhoneNo(e.target.value)}
+              children={undefined}
             />
           </div>
         </div>
@@ -71,7 +73,8 @@ export const ApplicationForm = ({ style, to }: FormProps) => {
               type="text"
               placeholder="Full name"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e: any) => setName(e.target.value)}
+              children={undefined}
             />
           </div>
           <div className="flex-1">
@@ -82,7 +85,8 @@ export const ApplicationForm = ({ style, to }: FormProps) => {
               type="email"
               placeholder="Email Address"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e: any) => setEmail(e.target.value)}
+              children={undefined}
             />
           </div>
         </div>
@@ -95,14 +99,15 @@ export const ApplicationForm = ({ style, to }: FormProps) => {
               type="text"
               placeholder="Enter City"
               value={city}
-              onChange={(e) => setCity(e.target.value)}
+              onChange={(e: any) => setCity(e.target.value)}
+              children={undefined}
             />
           </div>
           <div className="flex-1">
             <label htmlFor="" className="text-400-16 text-darkText">
               State
             </label>
-            <SelectInputLayout>
+            <SelectInputLayout label="" id="state">
               <option
                 value={state}
                 onClick={() => {
@@ -117,10 +122,7 @@ export const ApplicationForm = ({ style, to }: FormProps) => {
         <div className="">
           <label htmlFor="file" className="text-400-16 text-darkText">
             Upload Document
-            <div
-              className="flex flex-col gap-2 justify-center items-center py-6 border rounded mt-4"
-              style={{ borderColor: '#F2F2F2' }}
-            >
+            <div className="flex flex-col gap-2 justify-center items-center py-6 border rounded mt-4 border-greyLight">
               <p className="text-400-12">Drop file here</p>
               <div className="border border-priBlueColor rounded p-2 text-priBlueColor cursor-pointer">
                 <input id="file" type="file" style={{ display: 'none' }} />

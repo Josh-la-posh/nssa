@@ -38,7 +38,11 @@ export const ConfirmationPage = () => {
             <input type="number" max="1" required />
             <input type="number" max="1" required />
           </div>
-          <ButtonLayout style={{ marginTop: '22px', width: '339px' }} to="/reset">
+          <ButtonLayout
+            onClick={() => {}}
+            style={{ marginTop: '22px', width: '339px' }}
+            to="/reset"
+          >
             Confirm
           </ButtonLayout>
         </div>
