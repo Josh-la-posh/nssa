@@ -1,11 +1,12 @@
+import { useState } from 'react';
 import { ButtonLayout } from '@/components/UI/Button';
 import Logo from '../../../../assets/images/onboarding/logo-blue.svg';
 import Logo2 from '../../../../assets/images/onboarding/img-3.png';
 import Checked from '../../../../assets/images/onboarding/checked.svg';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { Modal } from '@/components/Layout/Modal';
 import { Approved } from '@/components/Layout/Modal/Approved';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const VerificationPage = () => {
   const [manual, setManual] = useState(0);
@@ -37,7 +38,7 @@ export const VerificationPage = () => {
           <div className="btns flex j-center">
             <Link to="/">
               <span className="form-link flex">
-                <span>icon</span>
+                <FontAwesomeIcon className="f self-center" icon="arrow-left" />
                 Back to Login
               </span>
             </Link>
@@ -83,7 +84,7 @@ export const VerificationPage = () => {
           <div className="btns flex j-center a-center">
             <Link to="/login">
               <span className="form-link flex">
-                <span>icon</span>
+                <FontAwesomeIcon className="f self-center" icon="arrow-left" />
                 Back to Login
               </span>
             </Link>

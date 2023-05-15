@@ -81,7 +81,7 @@ export const ForgotPasswordFormLayout = ({ style, to }: FormProps) => {
 
         <Link to="/login">
           <span className="form-link flex" style={{}}>
-            <span>icon</span>
+            <FontAwesomeIcon className="f self-center" icon="arrow-left" />
             Go back to Login
           </span>
         </Link>
@@ -127,7 +127,7 @@ export const ResetPasswordFormLayout = ({ style, to }: FormProps) => {
 
         <Link to="/login">
           <span className="form-link flex" style={{}}>
-            <span>icon</span>
+          <FontAwesomeIcon className="f self-center" icon="arrow-left" />
             Go back to Login
           </span>
         </Link>

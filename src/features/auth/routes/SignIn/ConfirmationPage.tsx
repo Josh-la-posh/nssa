@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import { ButtonLayout } from '@/components/UI/Button';
 import Logo from '../../../../assets/images/onboarding/logo-blue.svg';
 import Logo2 from '../../../../assets/images/onboarding/img-3.png';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const ConfirmationPage = () => {
   const [manual, setManual] = useState(0);
@@ -48,10 +49,10 @@ export const ConfirmationPage = () => {
         </div>
       )}
 
-      <div className="btns flex">
+      <div className="btns flex items-center">
         <Link to="/login">
           <span className="form-link flex">
-            <span>icon</span>
+            <FontAwesomeIcon className="self-center" icon="arrow-left" />
             Go back to Login
           </span>
         </Link>
