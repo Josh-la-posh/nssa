@@ -22,15 +22,13 @@ export function IncompleteApp() {
           </p>
           <div className="flex gap-5 my-16 text-500-12">
             <button
-              className="sec-btn"
+              className="sec-btn border border-priBtnColor"
               style={{ color: '#2F80ED', background: '#fff' }}
             >
               Re-Apply
             </button>
             <Link to="/appform">
-              <button className="sec-btn">
-                Fill School Application
-              </button>
+              <button className="sec-btn">Fill School Application</button>
             </Link>
           </div>
         </div>

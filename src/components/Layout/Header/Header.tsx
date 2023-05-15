@@ -7,7 +7,7 @@ type HeaderProps = {
 export const Header = () => {
   return (
     <header className="flex justify-between items-center px-11 py-3">
-      <h2 className="mr-auto">Admin</h2>
+      <h2 className="mr-auto">Super Admin</h2>
       <div className="search-bar mr-11 h-9 w-80 rounded flex justify-between items-center pr-4">
         <input type="text" placeholder="Search for ..." />
         <FontAwesomeIcon className="search-icon" icon="magnifying-glass" />

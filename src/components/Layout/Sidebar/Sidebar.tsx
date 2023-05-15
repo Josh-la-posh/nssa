@@ -4,7 +4,7 @@ import { sidebars } from '@/Data';
 import { Link } from 'react-router-dom';
 
 export const Sidebar = () => {
-  var page = localStorage.getItem('page') ? JSON.parse(localStorage.getItem('page')) : (0);
+  var page = localStorage.getItem('page') ? JSON.parse(localStorage.getItem('page')) : 0;
   const [curr, setCurr] = useState(page);
 
   return (
@@ -39,10 +39,6 @@ export const Sidebar = () => {
             </div>
           );
         })}
-      </div>
-
-      <div className="school-logo absolute bg-black w-36 h-36 rounded-xl bottom-24">
-        <img src="" alt="" />
       </div>
     </div>
   );

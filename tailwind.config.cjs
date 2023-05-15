@@ -17,6 +17,9 @@ module.exports = {
       darkText: '#212529',
       priGreyColor: '#828282',
       greyLight: '#F2F2F2',
+      priDanger: '#F84C4C',
+      borderColor: '#CED4DA',
+      inputText: '#38393C',
     },
 
     fontSize: {
@@ -24,6 +27,8 @@ module.exports = {
       10: '10px',
       12: '12px',
       15: '15px',
+      16: '16px',
+      18: '18px',
     },
 
     fontWeight: {

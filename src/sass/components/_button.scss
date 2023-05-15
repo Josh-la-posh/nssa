@@ -17,13 +17,28 @@
 
 .sec-btn {
   // max-width: 159px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 10rem;
-  padding: 6px;
-  text-align: center;
-  border: 1px solid #3062b4;
+  height: 25px;
   border-radius: 4px;
   font-size: 12px;
   font-weight: 500px;
   color: $color-white;
   background: #3062b4;
+}
+
+.sec-btn-danger {
+  // max-width: 159px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 25px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500px;
+  color: $color-white;
+  background: #f84c4c;
 }

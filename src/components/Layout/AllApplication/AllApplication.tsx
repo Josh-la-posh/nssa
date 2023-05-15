@@ -116,6 +116,7 @@
 
 import { Card } from '@/components/UI/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 // import React from 'react';
 // import { Table } from '.';
 // import EnhancedTable from './Table';
@@ -143,8 +144,12 @@ export function AllApplication() {
             <FontAwesomeIcon className="search-icon" icon="magnifying-glass" />
           </div>
           <div className="flex gap-2">
-            <button className="sec-btn">Filter</button>
-            <button className="sec-btn">Add New School</button>
+            <button className="sec-btn">
+              Filter
+            </button>
+            <Link to="/appform">
+              <button className="sec-btn">Add New School</button>
+            </Link>
           </div>
         </div>
       </div>

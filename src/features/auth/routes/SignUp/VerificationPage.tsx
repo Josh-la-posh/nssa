@@ -1,9 +1,11 @@
 import { ButtonLayout } from '@/components/UI/Button';
 import Logo from '../../../../assets/images/onboarding/logo-blue.svg';
 import Logo2 from '../../../../assets/images/onboarding/img-3.png';
+import Checked from '../../../../assets/images/onboarding/checked.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Modal } from '@/components/Layout/Modal';
+import { Approved } from '@/components/Layout/Modal/Approved';
 
 export const VerificationPage = () => {
   const [manual, setManual] = useState(0);
@@ -58,8 +60,23 @@ export const VerificationPage = () => {
             Confirm
           </ButtonLayout>
           {show && (
-            <Modal note="Go to Login" to="/login">
-              Your email has been verified successfully
+            <Modal>
+              <Approved
+                image={Checked}
+                note="Go to Login"
+                to="/login"
+                text="Your email has been verified successfully"
+                style={{ marginTop: '3rem', marginBottom: '1rem' }}
+              >
+                <ButtonLayout onClick={() => {}} to="" style={{ width: '100%', marginTop: '24px' }}>
+                  <div
+                    className="flex a-center j-center"
+                    style={{ height: '100%', backgroundColor: '#3065BB', borderRadius: '4px' }}
+                  >
+                    Continue
+                  </div>
+                </ButtonLayout>
+              </Approved>
             </Modal>
           )}
 
