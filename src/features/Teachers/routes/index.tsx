@@ -1,12 +1,13 @@
 import { Outlet, RouteObject } from 'react-router-dom';
 import { RouteError } from '@/components/Error';
 import { lazyImport } from '@/utils/lazyImport';
+import { TEACHER_ROUTE } from '@/config';
 
 const { Teachers } = lazyImport(() => import('./Teachers'), 'Teachers');
 
 const TeacherRouteList: RouteObject[] = [
   {
-    path: '/teachers',
+    path: TEACHER_ROUTE,
     element: <Teachers />,
   },
 ];

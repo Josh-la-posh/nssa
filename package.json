@@ -37,6 +37,8 @@
     "@mui/material": "^5.13.0",
     "@tanstack/react-query": "4.29.5",
     "antd": "^5.4.6",
+    "axios": "^1.4.0",
+    "rc-pagination": "^3.5.0",
     "react": "^18.2.0",
     "react-data-table-component": "^7.5.3",
     "react-dom": "^18.2.0",

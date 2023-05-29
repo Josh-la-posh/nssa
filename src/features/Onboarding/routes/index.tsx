@@ -1,12 +1,13 @@
 import { Outlet, RouteObject } from 'react-router-dom';
 import { RouteError } from '@/components/Error';
 import { lazyImport } from '@/utils/lazyImport';
+import { ONBORARDING_ROUTE } from '@/config';
 
 const { Onboarding } = lazyImport(() => import('./Onboarding'), 'Onboarding');
 
 const OnboardingRouteList: RouteObject[] = [
   {
-    path: '/onboarding',
+    path: ONBORARDING_ROUTE,
     element: <Onboarding />,
   },
 ];

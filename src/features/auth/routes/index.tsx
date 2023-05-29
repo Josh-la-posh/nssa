@@ -5,36 +5,26 @@ import { lazyImport } from '@/utils/lazyImport';
 import { ForgotPassword } from './SignIn/ForgotPassword';
 import { ConfirmationPage } from './SignIn/ConfirmationPage';
 import { ResetPassword } from './SignIn/ResetPassword';
-import { SignUp } from './SignUp/SignUp';
-import { VerificationPage } from './SignUp/VerificationPage';
+import { CONFIRMATIONPAGE_ROUTE, FORGOTPASSWORD_ROUTE, RESETPASSWORD_ROUTE } from '@/config';
 
 const { Login } = lazyImport(() => import('./SignIn/Login'), 'Login');
 
 const AuthRouteList: RouteObject[] = [
   {
     index: true,
-    // path: '/register',
-    element: <SignUp />,
-  },
-  {
-    path: '/login',
     element: <Login />,
   },
   {
-    path: '/forgotpassword',
+    path: FORGOTPASSWORD_ROUTE,
     element: <ForgotPassword />,
   },
   {
-    path: '/confirm',
+    path: CONFIRMATIONPAGE_ROUTE,
     element: <ConfirmationPage />,
   },
   {
-    path: '/reset',
+    path: RESETPASSWORD_ROUTE,
     element: <ResetPassword />,
-  },
-  {
-    path: '/verify',
-    element: <VerificationPage />,
   },
 ];
 

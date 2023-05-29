@@ -50,7 +50,7 @@ export const ConfirmationPage = () => {
       )}
 
       <div className="btns flex items-center">
-        <Link to="/login">
+        <Link to="/n">
           <span className="form-link flex">
             <FontAwesomeIcon className="self-center" icon="arrow-left" />
             Go back to Login

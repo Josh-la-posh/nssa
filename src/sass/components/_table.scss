@@ -1,17 +1,87 @@
-// .rdt_Table {
-//   &Head {
-//     &Row {
-//       font-size: $font-12;
-//       font-weight: $weight-700;
-//       color: #828282;
-//       line-height: 14.4;
-//       justify-content: space-between !important;
-//     }
-//   }
-//   &Col {
-//     margin: 0 !important;
-//     &_Sortable {
-//     }
-//   }
-// }
+.tableContent {
+  padding-bottom: 1rem;
+  border-radius: 4px;
+  margin-left: -2rem;
 
+  .tableContainer {
+    overflow-x: scroll;
+    background-color: #fff;
+    //   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+    @include respond(tab-port) {
+      padding: 1rem 0.66rem;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 0;
+      padding: 0;
+
+      thead {
+        border-top: 1px solid #e0e0e0;
+        tr {
+          th {
+            padding-left: 2rem;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid #e0e0e0;
+          border-top: 1px solid #e0e0e0;
+          td {
+            max-width: 130px;
+            font-size: $font-10;
+            height: 44px;
+            padding-left: 2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis !important;
+
+            @include respond(tab-land) {
+              padding: 15px 15px 15px 0;
+              max-width: 130px;
+              // min-width: 100px;
+              font-size: 12px;
+            }
+
+            @include respond(tab-port) {
+              padding: 10px 10px 10px 0;
+              max-width: 80px;
+              min-width: 78px;
+              font-size: 10px;
+            }
+
+            @include respond(phone) {
+              max-width: 70px;
+              min-width: unset;
+              font-size: 8px;
+            }
+            .status {
+              &_review {
+                color: #ffb73e;
+                background: rgba(255, 248, 182, 0.81);
+              }
+              &_reject {
+                color: #f84c4c;
+                background-color: #ffc7b6;
+              }
+            }
+
+            a {
+              text-decoration: none;
+              color: #3065bb;
+              border: 1px solid #3065bb;
+              border-radius: 4px;
+              padding: 4px 8px;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

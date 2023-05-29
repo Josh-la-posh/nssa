@@ -1,12 +1,13 @@
 import { Outlet, RouteObject } from 'react-router-dom';
 import { RouteError } from '@/components/Error';
 import { lazyImport } from '@/utils/lazyImport';
+import { PAYMENT_ROUTE } from '@/config';
 
 const { Payments } = lazyImport(() => import('./Payments'), 'Payments');
 
 const PaymentRouteList: RouteObject[] = [
   {
-    path: '/payments',
+    path: PAYMENT_ROUTE,
     element: <Payments />,
   },
 ];
