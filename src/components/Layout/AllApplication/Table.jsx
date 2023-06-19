@@ -189,6 +189,8 @@ export default function Table() {
               showTotal={(total, range) => `Showing ${range[1]} out of ${total}`}
               onChange={PaginationChange}
               total={data.length}
+              defaultPageSize={size}
+              pageSizeOptions={['6','12','18']}
               current={current}
               pageSize={size}
               showSizeChanger={false}

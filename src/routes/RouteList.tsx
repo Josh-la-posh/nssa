@@ -1,6 +1,6 @@
 import { RouteObject } from 'react-router-dom';
 
-import { BaseApp } from './BaseApp';
+import { BaseApp, BaseApps } from './BaseApp';
 
 import { RouteError } from '@/components/Error';
 import { AuthRoutes } from '@/features/auth';
@@ -16,8 +16,13 @@ export const routesList: RouteObject[] = [
     path: '',
     element: <BaseApp />,
     errorElement: <RouteError />,
+    children: [AuthRoutes],
+  },
+  {
+    path: '',
+    element: <BaseApps />,
+    errorElement: <RouteError />,
     children: [
-      AuthRoutes,
       AppRoutes,
       ResultRoutes,
       DashboardRoutes,
