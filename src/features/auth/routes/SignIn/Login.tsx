@@ -6,7 +6,14 @@ import { OnboardingLayout } from '@/components/Layout/OnboardingLayout';
 export const Login = () => {
   return (
     <div>
-      <OnboardingLayout text="Welcome back!" imgBg="onboarding__img" image={Design} logo={Logo}>
+      <OnboardingLayout
+        text="Welcome back!"
+        imgBg="onboarding__img"
+        image={Design}
+        logo={Logo}
+        style={{}}
+        topLogo=""
+      >
         <div className="signing__page">
           <div className="signing__page__content">
             <h2 className="pri-heading">Sign In</h2>
@@ -14,7 +21,7 @@ export const Login = () => {
               Welcome back!
             </p>
 
-            <SignInFormLayout style={{ marginTop: '70px' }} />
+            <SignInFormLayout to="" style={{ marginTop: '70px' }} />
           </div>
         </div>
       </OnboardingLayout>

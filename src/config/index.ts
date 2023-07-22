@@ -1,4 +1,5 @@
 export * from './env';
+export * from './route';
 
 const getIsApple = () => {
   const expression = /(Mac|iPhone|iPod|iPad)/i;

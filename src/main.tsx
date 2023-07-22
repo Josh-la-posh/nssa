@@ -5,12 +5,15 @@ import './index.css';
 import './sass/main.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faBell, faUsers, faMagnifyingGlass, faArrowLeft, faEye, faEyeSlash
+  faBell,
+  faUsers,
+  faMagnifyingGlass,
+  faArrowLeft,
+  faEye,
+  faEyeSlash,
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(
-  faBell, faUsers, faMagnifyingGlass, faArrowLeft, faEye, faEyeSlash
-);
+library.add(faBell, faUsers, faMagnifyingGlass, faArrowLeft, faEye, faEyeSlash);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

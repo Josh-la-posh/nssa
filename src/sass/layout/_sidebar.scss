@@ -1,2 +1,19 @@
 .sidebar {
+  z-index: 1000;
+  .active {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      background: #274f92;
+      border-radius: 8px;
+      z-index: -1;
+    }
+  }
 }

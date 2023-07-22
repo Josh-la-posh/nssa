@@ -5,8 +5,8 @@ import TopLogo from '../../../assets/images/onboarding/top-logo-1.png';
 type OnboardingLayoutProps = {
   children: React.ReactNode;
   text: string;
-  image: string;
-  logo: string;
+  image: any;
+  logo: any;
   style: any;
   imgBg: any;
   topLogo: string;

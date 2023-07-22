@@ -40,6 +40,12 @@
   line-height: 15.06px;
 }
 
+.text-400-15 {
+  font-size: $font-15;
+  font-weight: $small-weight;
+  line-height: 18px;
+}
+
 .text-400-16 {
   font-size: $font-16;
   font-weight: $small-weight;
@@ -64,6 +70,12 @@
   font-weight: $weight-600;
   line-height: 14.52px;
   // color: #333333;
+}
+
+.text-700-15 {
+  font-size: $font-15;
+  font-weight: $weight-700;
+  line-height: 18px;
 }
 
 .pri-heading {

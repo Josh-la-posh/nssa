@@ -1,0 +1,14 @@
+.card {
+  background: $color-white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+  .title {
+    font-size: $font-10;
+    font-weight: $small-weight;
+    color: #7f8187;
+  }
+  .value {
+    font-size: $font-12;
+  }
+}

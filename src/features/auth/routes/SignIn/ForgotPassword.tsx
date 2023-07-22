@@ -13,6 +13,7 @@ export const ForgotPassword = () => {
         image={Design}
         logo={Logo}
         topLogo={TopLogo}
+        text=""
         style={{ marginTop: '68px' }}
       >
         <div className="signing__page">
