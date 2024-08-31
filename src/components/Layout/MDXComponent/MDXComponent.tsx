@@ -149,6 +149,12 @@ const useMDX = (code: string) => {
     error: null,
   });
 
+  type Jsx = (type: any, props: any, key?: any) => React.ReactElement;
+
+  const jsx: Jsx = (type, props, key) => {
+    return React.createElement(type, props, key);
+  };
+
   async function setConfig(code: string) {
     // const remarkPlugins = [remarkFrontmatter];
     // const rehypePlugins = [rehypeSanitize];
@@ -159,7 +165,9 @@ const useMDX = (code: string) => {
       const res = await evaluate(code, {
         ...runtime,
         useMDXComponents,
-        // useDynamicImport: true,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        jsx: jsx,
+        jsxs: jsx,
         Fragment,
       });
       result = res.default;
@@ -176,6 +184,7 @@ const useMDX = (code: string) => {
   }
   useEffect(() => {
     setConfig(code);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [code]);
   // useCurrentUsermo(() => setConfig(code), []);
 
