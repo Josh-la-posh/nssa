@@ -158,7 +158,7 @@ export const OTPInput = (props: Partial<OTPInputProps>) => {
   };
 
   return (
-    <div className={clsx('flex gap-1 items-center', containerClassName)}>
+    <div className={clsx('flex items-center gap-1', containerClassName)}>
       {valueItems.map((el, idx) => (
         <input
           name={name + idx}
@@ -170,7 +170,7 @@ export const OTPInput = (props: Partial<OTPInputProps>) => {
           pattern="\d{1}"
           maxLength={length}
           className={clsx(
-            'uppercase font-semibold text-lg outline-1 outline-none focus:border-gray-800 hover:border-blue-400 h-10 w-10 text-center bg-transparent border rounded-md border-gray-400',
+            'h-10 w-10 rounded-md border border-gray-400 bg-transparent text-center text-lg font-semibold uppercase outline-none outline-1 hover:border-blue-400 focus:border-gray-800',
             className
           )}
           value={el}

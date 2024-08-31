@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo, useCallback } from "react";
+import { useEffect, useState, useMemo, useCallback } from 'react';
 
 type TimeValueType = {
   minutes: number;
@@ -24,10 +24,7 @@ export const useCountdown = (
 ): [value: TimeValueType, reset: () => void, isComplete: boolean] => {
   const initialValue = defaultValue || 30;
 
-  const { h, m, s } = useMemo(
-    () => toHoursAndMinutes(initialValue),
-    [initialValue]
-  );
+  const { h, m, s } = useMemo(() => toHoursAndMinutes(initialValue), [initialValue]);
 
   const [hours, setHours] = useState(h);
   const [minutes, setMinutes] = useState(m);

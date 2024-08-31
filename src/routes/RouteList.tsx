@@ -1,34 +1,16 @@
 import { RouteObject } from 'react-router-dom';
 
-import { BaseApp, BaseApps } from './BaseApp';
-
 import { RouteError } from '@/components/Error';
-import { AuthRoutes } from '@/features/auth';
-import { AppRoutes } from '@/features/app';
-import { ResultRoutes } from '@/features/CheckResults';
-import { DashboardRoutes } from '@/features/Dashboard';
-import { OnboardingRoutes } from '@/features/Onboarding';
-import { PaymentRoutes } from '@/features/Payments';
-import { TeacherRoutes } from '@/features/Teachers';
 
-export const routesList: RouteObject[] = [
+import { authenticatedRoutesList } from './AuthenticatedApp';
+import { Root, commonRoutes } from './Root';
+import { unAuthenticatedRoutesList } from './UnAuthenticatedApp';
+
+export const routesList = (): RouteObject[] => [
   {
     path: '',
-    element: <BaseApp />,
+    element: <Root />,
     errorElement: <RouteError />,
-    children: [AuthRoutes],
-  },
-  {
-    path: '',
-    element: <BaseApps />,
-    errorElement: <RouteError />,
-    children: [
-      AppRoutes,
-      ResultRoutes,
-      DashboardRoutes,
-      OnboardingRoutes,
-      PaymentRoutes,
-      TeacherRoutes,
-    ],
+    children: [...commonRoutes, authenticatedRoutesList, unAuthenticatedRoutesList],
   },
 ];
