@@ -19,7 +19,7 @@ import { LexicalNestedComposer } from '@lexical/react/LexicalNestedComposer';
 import { PlainTextPlugin } from '@lexical/react/LexicalPlainTextPlugin';
 import { useLexicalNodeSelection } from '@lexical/react/useLexicalNodeSelection';
 import { mergeRegister } from '@lexical/utils';
-import type { GridSelection, LexicalEditor, NodeKey, NodeSelection, RangeSelection } from 'lexical';
+import type { LexicalEditor, NodeKey, NodeSelection, RangeSelection } from 'lexical';
 import {
   $getNodeByKey,
   $getSelection,
@@ -118,9 +118,7 @@ export default function ImageComponent({
   const [isSelected, setSelected, clearSelection] = useLexicalNodeSelection(nodeKey);
   const [isResizing, setIsResizing] = useState<boolean>(false);
   const [editor] = useLexicalComposerContext();
-  const [selection, setSelection] = useState<RangeSelection | NodeSelection | GridSelection | null>(
-    null
-  );
+  const [selection, setSelection] = useState<RangeSelection | NodeSelection | any | null>(null);
   const activeEditorRef = useRef<LexicalEditor | null>(null);
 
   const onDelete = useCallback(
